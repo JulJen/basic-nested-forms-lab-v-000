@@ -1,7 +1,7 @@
 class RecipesController < ApplicationController
   def show
-    raise params.inspect
     @recipe = Recipe.find(params[:id])
+    raise params.inspect
   end
 
   def index
