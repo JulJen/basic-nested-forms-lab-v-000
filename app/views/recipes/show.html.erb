@@ -2,12 +2,13 @@
 
 <h3>Ingredients:</h2>
 
-<% if !@recipe.ingredients.empty? %>
-  <ul>
-  <%= f.fields_for :ingredients do |ingredient| %>
-    <li>
-      name: <%= ingredient.text_field :name %>
-      qty: <%= ingredient.text_field :quantity %>
-    </li>
+
+  <% if !@recipe.ingredients.empty? %>
+    <ul>
+      <% @recipe.ingredients.each do |ingredient| %>
+        <li><%= "#{ingredient.name} X #{ingredient.quantity}" %></li>
+      <% end %>
+    <% else %>
+      <p> No Ingredients! </p>
+    </ul>
   <% end %>
-<% end %>
