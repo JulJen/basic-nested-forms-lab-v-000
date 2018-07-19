@@ -2,6 +2,7 @@ class RecipesController < ApplicationController
   def show
     @recipe = Recipe.find(params[:id])
     @ingredients = Ingredient.all
+    raise params.inspect
   end
 
   def index
