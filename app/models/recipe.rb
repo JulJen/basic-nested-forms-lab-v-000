@@ -8,7 +8,8 @@ class Recipe < ActiveRecord::Base
     ingredient_attributes.each do |i, ingredient_attributes|
       if ingredient.strip != nil
         self.ingredients.build(ingredient_attributes)
-      end 
+      end
     end
   end
+  
 end
