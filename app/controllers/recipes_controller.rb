@@ -14,7 +14,6 @@ class RecipesController < ApplicationController
   end
 
   def create
-params.inspect
     @recipe = Recipe.new(recipe_params)
     if @recipe.save
       redirect_to @recipe
