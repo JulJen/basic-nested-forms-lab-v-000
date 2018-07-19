@@ -1,25 +1,16 @@
 <%= form_for @recipe do |f| %>
-  <p>
-    <%= f.label :title %>
-    <%= f.text_field :title %><br>
-  </p>
+  <%= f.label :title %>
+  <%= f.text_field :title %><br>
 
   <br><br>
 
   <%= f.fields_for :ingredients do |ingred| %>
-    <fieldset>
-      <legend>Ingredients</legend>
-      <p>
-      <%= ingred.label :name_1 %>
-        <%= ingred.text_field :name_1 %>
-      </p>
-      <p>
-        <%= ingred.label :quantity_1 %>
-        <%= ingred.text_field :quantity_1 %>
-      </p>
-        <%= ingred.hidden_field :ingredient_type %>
-    </fieldset>
-    <% end %>
+    <%= ingred.label :name %>
+    <%= ingred.text_field :name %>
+    <%= ingred.label :quantity %>
+    <%= ingred.text_field :quantity %>
+    <br><br>
+  <% end %>
 
   <%= f.submit %>
 <% end %>
