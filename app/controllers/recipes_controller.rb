@@ -18,6 +18,7 @@ class RecipesController < ApplicationController
     @recipe = Recipe.new(recipe_params)
     if @recipe.save
       redirect_to @recipe
+      raise params.inspect
     else
       render :new
     end
