@@ -1,5 +1,6 @@
 class RecipesController < ApplicationController
   def show
+    raise params.inspect
     @recipe = Recipe.find(params[:id])
   end
 
@@ -15,7 +16,6 @@ class RecipesController < ApplicationController
 
   def create
     @recipe = Recipe.new(recipe_params)
-    raise params.inspect
     if @recipe.save
       redirect_to @recipe
     else
