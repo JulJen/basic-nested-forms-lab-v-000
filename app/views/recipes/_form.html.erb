@@ -5,12 +5,10 @@
  <br><br>
 
    <%= f.fields_for :ingredients do |ingred| %>
-      <li>
         <%= ingred.label :name %>
         <%= ingred.text_field :name %>
         <%= ingred.label :quantity %>
         <%= ingred.text_field :quantity %>
-      <li>
       <br><br>
     <% end %>
 
