@@ -5,6 +5,7 @@
  <br><br>
 
    <%= f.fields_for :ingredients do |ingred| %>
+   <%= params.inspect %>
       <li>
         <%= ingred.label :name %>
         <%= ingred.text_field :name %>
