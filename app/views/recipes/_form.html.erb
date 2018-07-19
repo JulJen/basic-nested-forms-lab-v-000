@@ -1,14 +1,21 @@
 <%= form_for @recipe do |f| %>
- <%= f.label :title %>
- <%= f.text_field :title %><br>
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title %><br>
+  </p>
+
 
  <br><br>
 
    <%= f.fields_for :ingredients do |ingred| %>
-        <%= ingred.label :name %>
-        <%= ingred.text_field :name %>
-        <%= ingred.label :quantity %>
-        <%= ingred.text_field :quantity %>
+   <fieldset>
+     <legend>Ingredients</legend>
+     <p>
+        <%= ingred.label :name_1 %>
+        <%= ingred.text_field :name_1 %>
+        <%= ingred.label :quantity_1 %>
+        <%= ingred.text_field :quantity_1 %>
+      </p>
       <br><br>
     <% end %>
 
