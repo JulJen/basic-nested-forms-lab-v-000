@@ -5,8 +5,9 @@
 <% if !@recipe.ingredients.empty? %>
   <ul>
   <%= f.fields_for :ingredients do |ingredient| %>
-  <li>
-    name: <%= ingredient.text_field :name %>
-    qty: <%= ingredient.text_field :quantity %>
-  </li>
+    <li>
+      name: <%= ingredient.text_field :name %>
+      qty: <%= ingredient.text_field :quantity %>
+    </li>
+  <% end %>
 <% end %>
