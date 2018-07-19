@@ -15,16 +15,16 @@ class RecipesController < ApplicationController
   end
 
   def create
-    # @recipe = Recipe.create(recipe_params)
-    # redirect_to recipe_path(@recipe)
-    @recipe = Recipe.new(recipe_params)
-    @recipe.ingredients_attributes=(params[:recipe][:ingredients_attributes])
-
-    if @recipe.save
-      redirect_to @recipe #/recipes/#{@recipe.id}
-    else
-      render :new
-    end
+    @recipe = Recipe.create(recipe_params)
+    redirect_to recipe_path(@recipe)
+    # @recipe = Recipe.new(recipe_params)
+    # @recipe.ingredients_attributes=(params[:recipe][:ingredients_attributes])
+    #
+    # if @recipe.save
+    #   redirect_to @recipe #/recipes/#{@recipe.id}
+    # else
+    #   render :new
+    # end
   end
 
 
