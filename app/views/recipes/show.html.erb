@@ -3,7 +3,10 @@
 <h3>Ingredients</h2>
 
 <ul>
-<% @recipe.ingredients.each do |ingredient| %>
-  <li><%= "#{ingredient.name} X #{ingredient.quantity}" %></li>
+  <% if !@recipe.ingredients.empty? %>
+    <% @recipe.ingredients.each do |ingredient| %>
+      <li><%= "#{ingredient.name} X #{ingredient.quantity}" %></li>
+  <% else %>
+    <p> No Ingredients! </p>
 <% end %>
 </ul>
