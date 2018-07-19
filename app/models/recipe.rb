@@ -6,4 +6,8 @@ class Recipe < ActiveRecord::Base
      self.ingredient = Ingredient.find_or_create_by(name: ingredient.name)
      self.ingredient.update(ingredient)
    end
+
+   def note_contents
+     self.notes.map(&:content)
+   end 
 end
