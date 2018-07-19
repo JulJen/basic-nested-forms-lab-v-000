@@ -19,7 +19,7 @@ class RecipesController < ApplicationController
     # @recipe = Recipe.create(recipe_params)
     # redirect_to recipe_path(@recipe)
     @recipe = Recipe.new
-    @recipe.ingredients_attributes=(params[:name][:quantity])
+    @recipe.ingredients_attributes=(params[:name],[:quantity])
 
     if @recipe.save
       redirect_to @recipe #/recipes/#{@recipe.id}
