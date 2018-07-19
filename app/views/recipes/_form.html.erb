@@ -5,13 +5,11 @@
  <br><br>
 
    <%= f.fields_for :ingredients do |ingred| %>
-   <%= params.inspect %>
       <li>
         <%= ingred.label :name %>
         <%= ingred.text_field :name %>
         <%= ingred.label :quantity %>
         <%= ingred.text_field :quantity %>
-        <%= params.inspect %>
       <li>
       <br><br>
     <% end %>
