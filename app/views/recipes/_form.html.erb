@@ -7,9 +7,9 @@
  <%= f.fields_for :ingredients do |ingred| %>
     <%= ingred.label :name %>
     <%= ingred.text_field :name %>
-    <br><br>
     <%= ingred.label :quantity %>
     <%= ingred.text_field :quantity %>
+    <br><br>
   <% end %>
 
   <%= f.submit %>
