@@ -6,7 +6,7 @@
   <% if !@recipe.ingredients.empty? %>
     <ul>
       <% @recipe.ingredients.each do |ingredient| %>
-        <li><%= "#{ingredient.name} X #{ingredient.quantity}" %></li>
+        <li><%= "#{ingredient.name} - #{ingredient.quantity}" %></li>
       <% end %>
     <% else %>
       <p> No Ingredients! </p>
