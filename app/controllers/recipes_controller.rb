@@ -16,5 +16,11 @@ class RecipesController < ApplicationController
   end
 
   def create
+    @recipe = Recipe.new(song_params)
+    if @recipe.save
+      redirect_to @recipe
+    else 
+      render :new
+    end 
   end
 end
